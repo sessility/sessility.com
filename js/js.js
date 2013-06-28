@@ -2,7 +2,11 @@
 var Sessility = function () {},
   sess;
 
+Sessility.prototype.useFont = false;
+Sessility.prototype.showNav = false;
+
 Sessility.prototype.initFont = function () {
+
   WebFontConfig = {
     google: { families: [ 'Anaheim::latin' ] }
   };
@@ -22,9 +26,7 @@ Sessility.prototype.revealNav = function (n) {
   nav.classList.add('reveal-' + n);
 };
 
-Sessility.prototype.onReady = function () {
-
-  this.initFont();
+Sessility.prototype.revealNavs = function () {
 
   window.setTimeout(function () {
     sess.revealNav.call(sess, 0);
@@ -33,6 +35,24 @@ Sessility.prototype.onReady = function () {
   window.setTimeout(function () {
     sess.revealNav.call(sess, 1);
   }, 2300);
+
+};
+
+Sessility.prototype.showAnemone = function () {
+  document.getElementsByClassName('anemone')[0].classList.add('show');
+};
+
+Sessility.prototype.onReady = function () {
+
+  if(this.useFont) {
+    this.initFont();
+  }
+
+  if(this.showNav) {
+    this.revealNavs();
+  }
+
+  this.showAnemone();
 
 };
 

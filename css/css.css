@@ -1,0 +1,37 @@
+body {
+    background: black;
+}
+
+.anemone {
+    background: url("../img/tyrell.jpg") no-repeat scroll 50% 0 / 1300px auto black;
+    bottom: 0;
+    left: 0;
+    max-height: 100%;
+    min-height: 100%;
+    opacity: 0.5;
+    position: fixed;
+    right: 0;
+}
+
+.wrapper {
+    position: relative;
+    z-index: 1;
+}
+
+h1 {
+    background: url("../img/sessility.png") repeat scroll 0 0 transparent;
+    direction: ltr;
+    height: 42px;
+    text-indent: -10000px;
+    width: 222px;
+    margin: 2em auto;
+}
+
+.heading p {
+    background: url("../img/adj.png") no-repeat scroll 0 0 / 100% auto transparent;
+    direction: ltr;
+    height: 57.5px;
+    margin: 2em auto;
+    text-indent: -10000px;
+    width: 550px;
+}

@@ -58,8 +58,8 @@ Sessility.prototype.onReady = function () {
 
 window.addEventListener('load', function () {
   sess = Object.create(Sessility.prototype, {
-    useFont: {value:true},
-    showNav: {value: true}
+    useFont: {value: false },
+    showNav: {value: false }
   });
   sess.onReady.call(sess);
 });
